@@ -14,8 +14,8 @@ npx create-react-app <react-js>
 cd <react-js>
 npm start
 ```
-- Running reactJS project in Production
+- [Running reactJS project in Production](https://create-react-app.dev/docs/production-build/)
 ```
 npm install -g serve
-serve -s build
+serve -s build ## (opt-in) --profile 
 ```
