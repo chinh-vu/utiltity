@@ -1,4 +1,4 @@
-## install Jupyter
+## [install Jupyter](https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format)
 ```jshelllanguage
 pip install jupyterlab
 ```
