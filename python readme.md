@@ -13,7 +13,8 @@ pip3 install sklearn
 pip3 install flask
 ```
 
-# Alternative installing required python package create ```requirements.txt``` run ```pip install -r requirements.txt```
+# Alternative installing required python package 
+- create ```requirements.txt``` run ```pip install -r requirements.txt```
 ```jshelllanguage
 pandas
 matplotlib
