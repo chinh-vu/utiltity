@@ -1,5 +1,5 @@
 # utiltity - knowlege share
-- [Postgresql Dockerfile](docker-postgresql.md)
+- [Postgresql Dockerfile](docker/dockerpostgresql.md)
 
 
 # Gradle -
