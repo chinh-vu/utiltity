@@ -42,3 +42,6 @@ public class HttpResponseHelper {
 }
 ```
 In the above example a generic '404 - Not Found' response is possible if the method invocator passes a Maybe.empty() when no data is found, otherwise a '200 - Ok' response is built with type erasure.
+
+### JPA Sample
+- [postgres](https://github.com/rmondejar/micronaut-postgres-example)
