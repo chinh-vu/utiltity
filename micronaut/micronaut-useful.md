@@ -8,6 +8,7 @@ Quick note on application.yml configuration, the properties for configuration ca
 - [Caching - Redis 1.1.1](https://micronaut-projects.github.io/micronaut-redis/snapshot/guide/#cache)
 - [Bean Validation](https://docs.micronaut.io/1.2.7/guide/index.html#beanValidation)
 - [Bean Scopes](https://docs.micronaut.io/1.2.7/guide/index.html#scopes)
+- [data](https://mflash.dev/blog/2020/04/05/querying-postgres-with-spring-data-and-micronaut-data/)
 
 # Guides
 - [First Micronaut App](https://guides.micronaut.io/1.x/micronaut-guides/creating-your-first-micronaut-app/guide/)
