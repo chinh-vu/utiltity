@@ -1,5 +1,6 @@
 # utiltity - knowlege share
 - [Postgresql Dockerfile](docker/docker-postgresql.md)
+- [nodejs pg multiple rows](https://www.wlaurance.com/2018/09/node-postgres-insert-multiple-rows)
 
 
 # Gradle -
