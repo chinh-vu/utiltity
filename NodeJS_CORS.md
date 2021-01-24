@@ -161,4 +161,4 @@ module.exports = app;
   
 ## [Passport.js](http://www.passportjs.org/)
 - [code sample](https://github.com/goranlisak/openid-connect-sample)
-
+- [code sample](https://gist.github.com/danwit/e0a7c5ad57c9ce5659d2)
