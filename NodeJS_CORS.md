@@ -1,4 +1,12 @@
 # Using CORS in Express
+## Install NodeJS without admin right
+- go to [nodejs](https://nodejs.org/en/download/)
+- scroll down and select all options
+- look for **node-<version-win-x64.zip**
+- extract and rename parent folder to NodeJS
+- move NodeJS to c:\programdata\nodejs
+- add ```set PATH=c:\programdata\nodejs;%PATH%```
+
 ## Cors Enabling
 - install cors
 ```
