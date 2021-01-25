@@ -6,6 +6,11 @@
 - extract and rename parent folder to NodeJS
 - move NodeJS to c:\programdata\nodejs
 - add ```set PATH=c:\programdata\nodejs;%PATH%```
+- validate
+```
+node -v
+npm -v
+```
 
 ## Cors Enabling
 - install cors
