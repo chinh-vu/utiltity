@@ -178,3 +178,6 @@ module.exports = app;
 
 ## Error Handling
 - [article](https://zellwk.com/blog/express-errors/)
+
+## Env and Protect Secret Key
+- [article](https://zellwk.com/blog/environment-variables/)
