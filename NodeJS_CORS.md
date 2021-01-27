@@ -173,6 +173,7 @@ module.exports = app;
   - [code sample](https://github.com/goranlisak/openid-connect-sample)
   
 ## [Passport.js](http://www.passportjs.org/)
+- [best code sample](https://github.com/passport/express-4.x-local-example) - without real db 
 - [code sample](https://github.com/goranlisak/openid-connect-sample)
 - [code sample](https://gist.github.com/danwit/e0a7c5ad57c9ce5659d2)
 
