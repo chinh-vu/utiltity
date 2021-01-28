@@ -12,12 +12,17 @@ const router = express.Router();
 ```
 router.route('/')
   .get(function(req, res) {
+    // refactor this code block to function, make sure callback being implemented
+    // callback takes in 2 input parameters (error, data)
     fs.readFile(datafile, 'utf8', (err, data) => {
-      if(err) console.log(err);
-      else {
+      if(err){
+      	console.log(err);
+	// invoke callback - callback(err, null)
+      } else {
 	let usersData = JSON.parse(data);
 				
 	console.log('Returning Users');
+	// invoke callback as callback(null, usersData)
 	res.send(usersData);
      }
   });
@@ -30,7 +35,7 @@ router.route('/')
 ```
 router.route('/')
   .get(function(req, res) {
-    getUsers( (err, data) => {
+    getUsers( /* callback function */ (err, data) => {
     	if(err) console.log(err);
 	else {
 	  res.send(data);
