@@ -6,7 +6,7 @@ const fs = require('fs')
 const datafile = 'server/data/users.json';
 const router = express.Router();
 ```
-- Original Code
+- Original Code - Synchronous code
 ```javascript
 router.route('/')
   .get(function(req, res) {
@@ -77,6 +77,42 @@ function getUsers() {
         resolve(usersData);
       }
     });
+  })
+}
+```
+- Alternative of promise
+```javascript
+const fsPromise = require('fs').promise;
+function getUsers() {
+     // since fsPromises is already implemented the Promise
+     let usersData =  fsPromises.readFile(datafile, 'utf8')
+     	.then(data => JSON.parse(data));
+     return usersData;
+  })
+}
+```
+- Async Await
+```javascript
+const fsPromise = require('fs').promise;
+
+router.route('/')
+  .get(async function(req, res) {
+  // async/await does not handle error, therefore, try-catch block need to be added to handle error
+    try {
+      let usersData = getUsers();
+      res.send(usersData);
+    } cacth(error) {
+      res.status(500).send(error)
+    }
+  });
+})
+// need a function that return Promise
+
+// no longer needed to passed in call back function since the code is implemening promise
+function async getUsers() {
+     let usersRawData =  await fsPromises.readFile(datafile, 'utf8');
+     let usersData = JSON.parse(usersRawData));
+     return usersData;
   })
 }
 ```
