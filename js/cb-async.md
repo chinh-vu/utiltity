@@ -1,6 +1,4 @@
 ## Callback function
-
-### Code Refactoring
 - common code
 ```javascript
 const express = require('express');
@@ -51,5 +49,34 @@ function getUsers(callback) {
       callback(null, usersData);
     }
   });
+}
+```
+- Promises
+```javascript
+router.route('/')
+  .get(function(req, res) {
+    getUsers()
+      .then( data => {
+      	console.log('Returing users');
+	res.send(data);
+      })
+      .catch(error => res.status(500).send(error))
+      .finally( () => console.log('Clean up if there is');)
+  });
+})
+
+// no longer needed to passed in call back function since the code is implemening promise
+function getUsers() {
+  return new Promise( (resolve, reject) => {
+    fs.readFile(datafile, 'utf8', (err, data) => {
+      if(err) {
+        console.log(err);
+        reject(err);
+      } else {
+        let usersData = JSON.parse(data);
+        resolve(usersData);
+      }
+    });
+  })
 }
 ```
