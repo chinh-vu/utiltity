@@ -5,52 +5,48 @@
 ```
 const express = require('express');
 const fs = require('fs')
-const datafile = 'server/data/clothing.json';
+const datafile = 'server/data/users.json';
 const router = express.Router();
 ```
-- Original code
+- Original Code
 ```
 router.route('/')
-	.get(function(req, res) {
-		
-		/** (1) refactor for reusability
-		  */
-		/*
-		fs.readFile(datafile, 'utf8', (err, data) => {
-			if(err) console.log(err);
-			else {
-				let clothingData = JSON.parse(data);
+  .get(function(req, res) {
+    fs.readFile(datafile, 'utf8', (err, data) => {
+      if(err) console.log(err);
+      else {
+	let usersData = JSON.parse(data);
 				
-				console.log('Returning clothing data');
-				res.send(clothingData);
-			}
-		});
-		*/
-		
-		/**
-		  * this won't work because of the getClothingData is async
-		  */
-		/* 
-		console.log('Returning clothing data');
-		let clothingData = getClothingData();
-		res.send(clothingData);
-		*/
-		/** (2) therefore callback is required
-		  * where node callback convention has 2 parameters 'error' and 'data'
-		  *  	error is error which enconter
-		  *		data is data which returned
-		  * as following
-		  */
-		
-		console.log('Returning clothing data');
-		let clothingData = getClothingData((err, data) => {
-			if(err) console.log(err);
-			else {
-				console.log('Returning data');
-				res.send(data);
-			}
-		});
-		// res.send(clothingData);
-		// console.log('Doing more work');
-	})
+	console.log('Returning Users');
+	res.send(usersData);
+     }
+  });
+})
+```
+- Refactored Code
+  - Callback is a MUST when. NodeJS <b>callback</b> convention expects 2 input parameters
+   - error
+   - data
+```
+router.route('/')
+  .get(function(req, res) {
+    getUsers( (err, data) => {
+    	if(err) console.log(err);
+	else {
+	  res.send(data);
+	}
+    });
+  });
+})
+function getUsers(callback) {
+  fs.readFile(datafile, 'utf8', (err, data) => {
+    if(err) {
+      console.log(err);
+      callback(err, null)
+    } else {
+      let usersData = JSON.parse(data);
+      callback(null, usersData);
+    }
+  });
+}
 ```
