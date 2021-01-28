@@ -30,8 +30,8 @@ router.route('/')
 ```
 - Refactored Code
   - Callback is a MUST when. NodeJS <b>callback</b> convention expects 2 input parameters
-   - error
-   - data
+    - error
+    - data
 ```javascript
 router.route('/')
   .get(function(req, res) {
