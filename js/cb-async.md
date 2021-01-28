@@ -2,14 +2,14 @@
 
 ### Code Refactoring
 - common code
-```jsscript
+```javascript
 const express = require('express');
 const fs = require('fs')
 const datafile = 'server/data/users.json';
 const router = express.Router();
 ```
 - Original Code
-```
+```javascript
 router.route('/')
   .get(function(req, res) {
     // refactor this code block to function, make sure callback being implemented
@@ -32,7 +32,7 @@ router.route('/')
   - Callback is a MUST when. NodeJS <b>callback</b> convention expects 2 input parameters
    - error
    - data
-```
+```javascript
 router.route('/')
   .get(function(req, res) {
     getUsers( /* callback function */ (err, data) => {
