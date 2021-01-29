@@ -99,7 +99,7 @@ router.route('/')
   .get(async function(req, res) {
   // async/await does not handle error, therefore, try-catch block need to be added to handle error
     try {
-      let usersData = getUsers();
+      let usersData = await getUsers();
       res.send(usersData);
     } cacth(error) {
       res.status(500).send(error)
