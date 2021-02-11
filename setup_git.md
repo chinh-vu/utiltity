@@ -1,4 +1,5 @@
 ## Create and Config SSH key
+- [article](https://kbroman.org/github_tutorial/pages/first_time.html)
 ### Create SSH Key
 ```jshell
 $ cd ~/.ssh/ && ssh-keygen -t rsa -b 4096 -C "email@example.com"
