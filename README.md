@@ -19,3 +19,6 @@ sudo n stable upgrade to the current stable version
 ./gradlew build -x test -Dorg.gradle.java.home=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 ```
 
+## Swagger Node 
+- [article](https://www.codementor.io/@peteradeoye/splitting-your-swagger-spec-into-multiple-files-in-a-node-project-nuprc0mej)
+
