@@ -22,3 +22,5 @@ sudo n stable upgrade to the current stable version
 ## Swagger Node 
 - [article](https://www.codementor.io/@peteradeoye/splitting-your-swagger-spec-into-multiple-files-in-a-node-project-nuprc0mej)
 
+## Nodejs ES6
+- [tutorial](https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab/)
