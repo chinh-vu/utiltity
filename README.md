@@ -72,3 +72,5 @@ global.gConfig = finalConfig;
 console.log(`global.gConfig: ${JSON.stringify(global.gConfig, undefined, global.gConfig.json_indentation)}`);
 view raw
 ```
+- [article on sinon](https://www.sitepoint.com/sinon-tutorial-javascript-testing-mocks-spies-stubs/)
+
