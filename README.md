@@ -74,3 +74,7 @@ view raw
 ```
 - [article on sinon](https://www.sitepoint.com/sinon-tutorial-javascript-testing-mocks-spies-stubs/)
 
+- [geo location](https://ip-api.com/docs/api:json)
+- https://ipwhois.app/json/76.113.144.1
+
+- [react & express](https://rapidapi.com/blog/create-react-app-express/)
