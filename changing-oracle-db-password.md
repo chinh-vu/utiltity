@@ -13,3 +13,28 @@ commit;
  ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
  ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
  ```
+## from command line
+```
+SQL> SET LINESIZE 4000
+
+sqlplus /nolog
+SQL> connect / as SYSDBA
+Connected.
+
+SQL> SELECT username, account_status FROM dba_users WHERE ACCOUNT_STATUS LIKE '%EXPIRED%';
+
+SQL> ALTER USER system IDENTIFIED BY system;         
+User altered.
+
+SQL> ALTER USER system ACCOUNT UNLOCK;
+User altered.
+
+SQL> ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+Profile altered.
+
+SQL> exit
+
+select username, user_id, account_status, expiry_date, lock_date from cdb_users where account_status like  '%EXPIRED%';
+
+ALTER USER OID_MDS IDENTIFIED BY Btmgcs4mau;
+```
