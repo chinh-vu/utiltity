@@ -5,6 +5,11 @@
 
 # FINDIND BLOCKING QUERY
 - [found article](http://www.dba-oracle.com/t_find_blocking_sessions.htm#:~:text=Answer%3A%20You%20can%20query%20the%20dba_blockers%20and%20dba_waiters,these%20related%20notes%20on%20finding%20Oracle%20blocking%20sessions%3A)
+- check in the following tables
+  - v$lock/v$lock_object
+  - v$log_history
+  - v$process
+  
 ```
 SQL> select blocking_session, sid, serial#, wait_class, seconds_in_wait 
 from v$session
