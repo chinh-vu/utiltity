@@ -1,24 +1,36 @@
 ## [Checking Port Open](https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/)
-```
+
+```bash
 sudo lsof -i -P -n | grep LISTEN
 sudo netstat -tulpn | grep LISTEN
 sudo ss -tulpn | grep LISTEN
 sudo lsof -i:22 ## see a specific port such as 22 ##
 sudo nmap -sTU -O IP-address-Here
 
-$ netstat -tulpn | grep LISTEN
-$ netstat -plnt
+netstat -tulpn | grep LISTEN
+netstat -plnt
+```
+
+## [Checking Service](https://devconnected.com/how-to-list-services-on-linux/)
+```bash
+pstree
+systemctl list-units --type=service
+systemctl list-units --type=service --all
+systemctl list-units --state=<state>
 ```
 
 ## [Xargs](https://www.tecmint.com/xargs-command-examples/)
- command that reads streams of data from standard input, then generates and executes command lines
- ```
+
+- command that reads streams of data from standard input, then generates and executes command lines
+ 
+ ```bash
  find . -name "<pattern>" | xargs <other command>
  find . -name "<pattern>" | xargs chmod 755
  ```
 
 ## find PID
-```
+
+```bash
 # FileName: wlsPid.sh 
 # This script will Fetches PID of WebLogic Server instances 
 # =========================================================
