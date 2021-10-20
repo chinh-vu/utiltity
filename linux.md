@@ -27,6 +27,14 @@ systemctl list-units --state=<state>
  find . -name "<pattern>" | xargs <other command>
  find . -name "<pattern>" | xargs chmod 755
  ```
+ 
+ ## Change permission/owner/group
+ 
+ ```bash
+ chmod xxx <file name>
+ chgrp <group name> <file name | directory>
+ chown <owner> <file name | directory>
+ ```
 
 ## find PID
 
