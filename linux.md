@@ -14,6 +14,9 @@ netstat -plnt
 ## Checking Firewall
 ```
 firewall-cmd --list-all-zones
+
+-- open up the firewall
+firewall-cmd --permanent --add-port=5933/tcp
 ```
 
 ## [Checking Service](https://devconnected.com/how-to-list-services-on-linux/)
