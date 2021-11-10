@@ -11,6 +11,11 @@ netstat -tulpn | grep LISTEN
 netstat -plnt
 ```
 
+## Checking Firewall
+```
+firewall-cmd --list-all-zones
+```
+
 ## [Checking Service](https://devconnected.com/how-to-list-services-on-linux/)
 ```bash
 pstree
