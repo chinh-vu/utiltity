@@ -1,0 +1,7 @@
+- export certificate from ORCE/Xadmin
+  - Select ```lock 
+  - Select ```Detail``` tab 
+  - Click ```Copy to File``` 
+  - Select ```DER Encoded binary X.509(.CER)```
+  - Save as ```File name```
+- 
