@@ -71,3 +71,8 @@ print  "=====================================" } ;
  
 #=== Published on http://wlatricksntips.blogspot.com  ===== 
 ```
+
+## Count number of file in directory
+```
+find <directory> -type f | wc -l
+```
